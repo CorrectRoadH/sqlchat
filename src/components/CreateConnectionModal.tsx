@@ -370,7 +370,8 @@ const CreateConnectionModal = (props: Props) => {
                       minRows={3}
                       maxRows={3}
                       value={
-                        (connection.ssl && connection.ssl[selectedSSLField]) ?? ""
+                        (connection.ssl && connection.ssl[selectedSSLField]) ??
+                        ""
                       }
                       onChange={handleSSLValueChange}
                     />
@@ -434,7 +435,7 @@ const CreateConnectionModal = (props: Props) => {
               {t("common.close")}
             </button>
             <button
-              className="btn"
+              className="btn !bg-indigo-600 !hover:bg-indigo-500"
               disabled={isRequesting || !allowSave}
               onClick={handleCreateConnection}
             >
